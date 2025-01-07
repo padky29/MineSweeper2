@@ -1,3 +1,7 @@
+package Player;
+
+import Game.*;
+
 public class Score {
     private final long time;
     private final Player player;

@@ -1,10 +1,11 @@
+package Game;
+
+import Player.*;
+
 import java.util.*;
 
 
 public class Menu {
-    /**
-     * The current count of played games.
-     */
     private static final int HISTORY_LIMIT = 3;
 
     private static List<Score> scores = new ArrayList<>();
@@ -12,10 +13,6 @@ public class Menu {
     public Menu() {
     }
 
-    /**
-     * Main game loop. The player can enter commands to interact with the game.
-     * The loop continues until the game is over (either win or loss).
-     */
     public static void gameMenu() {
         Scanner sc = new Scanner(System.in);
 
@@ -50,9 +47,6 @@ public class Menu {
         scores.add(score);
     }
 
-    /**
-     * Displays the results of the last 3 games.
-     */
     public static void showLastGames() {
         if (scores.isEmpty()) {
             System.out.println("No games played yet.");
@@ -69,7 +63,7 @@ public class Menu {
         }
     }
 
-    static String formatTime(long time) {
+    public static String formatTime(long time) {
         long hours = time / 3600;
         long minutes = (time % 3600) / 60;
         long seconds = time % 60;
