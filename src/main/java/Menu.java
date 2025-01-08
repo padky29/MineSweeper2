@@ -30,6 +30,7 @@ public class Menu {
                 break;
             case "3":
                 System.out.println("Goodbye!");
+                System.out.println("menos");
                 System.exit(0); // Exit the program
                 break;
             default:
