@@ -1,7 +1,3 @@
-package Game;
-
-import Player.*;
-
 import java.util.*;
 
 public class Game {
@@ -220,7 +216,7 @@ public class Game {
 
         // If it's a bomb, end the game
         if (game[rowNum][colNum].isBomb()) {
-            System.out.println("You hit a bomb! Game.Game over!");
+            System.out.println("You hit a bomb! Game over!");
             for (Cell[] cells : game) {
                 for (int j = 0; j < game[0].length; j++) {
                     cells[j].setRevealed(true);

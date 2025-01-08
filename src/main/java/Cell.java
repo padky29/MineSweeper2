@@ -1,5 +1,3 @@
-package Game;
-
 public class Cell {
     private boolean revealed = false;
     private boolean flagged = false;

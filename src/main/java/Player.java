@@ -1,7 +1,4 @@
-package Player;
-
 import java.util.List;
-import Game.*;
 
 public class Player {
     private String name;
