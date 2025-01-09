@@ -1,3 +1,8 @@
+package Game;
+
+import User.Player;
+import User.Score;
+
 import java.util.*;
 
 public class Game {
@@ -31,6 +36,8 @@ public class Game {
         Scanner sc = new Scanner(System.in);
 
         Player currentPlayer = getPlayerForGame(sc);
+
+        currentPlayer.getInventory().initializeRandomPowerUps();
 
         while (true) {
             renderGameStatus(startTime, currentPlayer);
@@ -109,6 +116,9 @@ public class Game {
                 break;
             case "/wins":
                 showAllWins();
+                break;
+            case "/inventory":
+                currentPlayer.getInventory().showInventory();
                 break;
             default:
                 return false;
@@ -216,7 +226,7 @@ public class Game {
 
         // If it's a bomb, end the game
         if (game[rowNum][colNum].isBomb()) {
-            System.out.println("You hit a bomb! Game over!");
+            System.out.println("You hit a bomb! Game.Game over!");
             for (Cell[] cells : game) {
                 for (int j = 0; j < game[0].length; j++) {
                     cells[j].setRevealed(true);
@@ -283,7 +293,6 @@ public class Game {
             }
         }
     }
-
 
     public void renderRevealedGame(Cell[][] game) {
         System.out.print("  "); // Top-left corner padding for column labels

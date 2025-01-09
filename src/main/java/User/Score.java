@@ -1,3 +1,7 @@
+package User;
+
+import Game.Menu;
+
 public class Score {
     private final long time;
     private final Player player;

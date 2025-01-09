@@ -1,3 +1,7 @@
+package Game;
+
+import User.Score;
+
 import java.util.*;
 
 
